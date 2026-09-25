@@ -265,6 +265,7 @@ class MainWindow(QMainWindow):
     def show_about(self):
         message(self, "Über MediaDust",
                 f"MediaDust {VERSION}\n\nDownload-Manager auf Basis von yt-dlp.\n"
+                "Open Source unter GPL-3.0 · nutzt Qt/PySide6 (LGPL-3.0)\n\n"
                 f"yt-dlp: {self.ytdlp_version or '–'}\nffmpeg: {self.ffmpeg_dir or 'nicht verfügbar'}\n"
                 f"Daten: {pu.data_dir()}")
 

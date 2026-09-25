@@ -18,7 +18,13 @@ VERSION = "0.2.2"
 IS_MAC = sys.platform == "darwin"
 IS_WIN = sys.platform.startswith("win")
 
-datas = [(str(ROOT / "assets" / "icon.png"), "assets")]
+datas = [
+    (str(ROOT / "assets" / "icon.png"), "assets"),
+    # Lizenztexte mitliefern (GPL-3.0 für MediaDust, LGPL-3.0 für Qt/PySide6)
+    (str(ROOT / "LICENSE"), "."),
+    (str(ROOT / "THIRD_PARTY_NOTICES.md"), "."),
+    (str(ROOT / "licenses"), "licenses"),
+]
 
 hiddenimports = ["certifi"]
 if IS_MAC:
@@ -82,7 +88,7 @@ if IS_MAC:
             "NSHighResolutionCapable": True,
             "NSRequiresAquaSystemAppearance": False,
             "LSApplicationCategoryType": "public.app-category.utilities",
-            "NSHumanReadableCopyright": "MediaDust – nutzt yt-dlp (Unlicense) und ffmpeg (LGPL/GPL)",
+            "NSHumanReadableCopyright": "© 2026 Lirby – GPL-3.0. Nutzt Qt/PySide6 (LGPL-3.0), yt-dlp und ffmpeg",
         },
     )
 else:
